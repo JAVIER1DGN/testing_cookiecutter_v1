@@ -1,0 +1,32 @@
+[build-system]
+requires = ["flit_core >=3.2,<4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "testing_cookiecutter_v1"
+version = "0.0.1"
+description = "the first thing to practice in order to achive my goals"
+authors = [
+  { name = "Javier" },
+]
+
+readme = "README.md"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    
+]
+requires-python = "~=3.13.0"
+
+
+[tool.ruff]
+line-length = 99
+src = ["testing_cookiecutter_v1"]
+include = ["pyproject.toml", "testing_cookiecutter_v1/**/*.py"]
+
+[tool.ruff.lint]
+extend-select = ["I"]  # Add import sorting
+
+[tool.ruff.lint.isort]
+known-first-party = ["testing_cookiecutter_v1"]
+force-sort-within-sections = true
+
